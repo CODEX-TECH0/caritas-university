@@ -1,10 +1,13 @@
 
 window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");
-  preloader.style.opacity = "0";
 
+  // Slide up (hide)
+  preloader.style.transform = "translateY(-100%)";
+
+  // Remove from DOM after animation
   setTimeout(() => {
     preloader.style.display = "none";
-  }, 600); // match CSS fade time
+  }, 1000); // Match the CSS transition time
 });
 
